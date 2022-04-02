@@ -2,7 +2,8 @@
 //  AppDelegate.swift
 //  MAPD724_SlotMachine_301194819
 //
-//  Created by Divyesh Solanki on 2022-04-02.
+//  Name: Divyesh Solanki
+// Student id: 301194819
 //
 
 import UIKit
