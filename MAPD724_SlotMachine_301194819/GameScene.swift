@@ -19,6 +19,7 @@ class GameScene: SKScene {
     var slotBackground1: Slotbackground?
     var slotBackground2: Slotbackground?
     var slotBackground3: Slotbackground?
+    var Playbutton: PlayButton?
 
     override func didMove(to view: SKView) {
         screenWidth = frame.width
@@ -26,23 +27,27 @@ class GameScene: SKScene {
         
         name = "GAME"
         
-        // add ocean to the scene
+        // add background to the scene
         backgroundSpace = BackgroundImage() // allocate memory
         backgroundSpace?.position = CGPoint(x: 0, y: -50)
 
-        // add ocean to the scene
+        // add slot background to the scene
         slotBackground1 = Slotbackground() // allocate memory
         slotBackground1?.position = CGPoint(x: 0, y: 0)
         slotBackground2 = Slotbackground() // allocate memory
         slotBackground2?.position = CGPoint(x: -150, y: 0)
         slotBackground3 = Slotbackground()  // allocate memory
         slotBackground3?.position = CGPoint(x: 150, y: 0)
+        
+        Playbutton = PlayButton() // allocate memory
+        Playbutton?.position = CGPoint(x: 300, y: -120)
 
 
-        addChild(backgroundSpace!) // add the ocean to the scene
-        addChild(slotBackground1!) // add the ocean to the scene
-        addChild(slotBackground2!) // add the ocean to the scene
-        addChild(slotBackground3!) // add the ocean to the scene
+        addChild(backgroundSpace!) // add backbround to the scene
+        addChild(slotBackground1!) // add slot to the scene
+        addChild(slotBackground2!) // add slot to the scene
+        addChild(slotBackground3!) // add slot to the scene
+        addChild(Playbutton!)
 
     }
     

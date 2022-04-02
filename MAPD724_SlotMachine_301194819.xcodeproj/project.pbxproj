@@ -28,6 +28,11 @@
 		3611EC2D27F8B26A00BDEDD0 /* SlotBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611EC2C27F8B26A00BDEDD0 /* SlotBackground.swift */; };
 		3611EC2F27F8B2B500BDEDD0 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611EC2E27F8B2B500BDEDD0 /* GameObject.swift */; };
 		3611EC3127F8B2D600BDEDD0 /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611EC3027F8B2D600BDEDD0 /* GameProtocol.swift */; };
+		3611EC3327F8BBEE00BDEDD0 /* UnknownCharacter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3611EC3227F8BBEE00BDEDD0 /* UnknownCharacter.png */; };
+		3611EC3527F8BCC600BDEDD0 /* exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 3611EC3427F8BCC600BDEDD0 /* exit.png */; };
+		3611EC3927F8BF5F00BDEDD0 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611EC3827F8BF5F00BDEDD0 /* PlayButton.swift */; };
+		3611EC3D27F8C3FB00BDEDD0 /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3611EC3C27F8C3FB00BDEDD0 /* playButton.png */; };
+		3611EC3F27F8C58200BDEDD0 /* playButton1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3611EC3E27F8C58200BDEDD0 /* playButton1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +58,11 @@
 		3611EC2C27F8B26A00BDEDD0 /* SlotBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotBackground.swift; sourceTree = "<group>"; };
 		3611EC2E27F8B2B500BDEDD0 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		3611EC3027F8B2D600BDEDD0 /* GameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
+		3611EC3227F8BBEE00BDEDD0 /* UnknownCharacter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UnknownCharacter.png; sourceTree = "<group>"; };
+		3611EC3427F8BCC600BDEDD0 /* exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit.png; sourceTree = "<group>"; };
+		3611EC3827F8BF5F00BDEDD0 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		3611EC3C27F8C3FB00BDEDD0 /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
+		3611EC3E27F8C58200BDEDD0 /* playButton1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,7 @@
 			children = (
 				3611EC2A27F8B1D100BDEDD0 /* BackgroundImage.swift */,
 				3611EC2C27F8B26A00BDEDD0 /* SlotBackground.swift */,
+				3611EC3827F8BF5F00BDEDD0 /* PlayButton.swift */,
 			);
 			path = GameObjects;
 			sourceTree = "<group>";
@@ -122,9 +133,13 @@
 			isa = PBXGroup;
 			children = (
 				3611EC1E27F8B00800BDEDD0 /* boo.png */,
+				3611EC3427F8BCC600BDEDD0 /* exit.png */,
 				3611EC1C27F8B00800BDEDD0 /* dragonball 2.png */,
+				3611EC3E27F8C58200BDEDD0 /* playButton1.png */,
 				3611EC1D27F8B00800BDEDD0 /* dragonball.png */,
 				3611EC1927F8B00800BDEDD0 /* dragonball1.png */,
+				3611EC3C27F8C3FB00BDEDD0 /* playButton.png */,
+				3611EC3227F8BBEE00BDEDD0 /* UnknownCharacter.png */,
 				3611EC1B27F8B00800BDEDD0 /* goku.png */,
 				3611EC1A27F8B00800BDEDD0 /* krilin.png */,
 				3611EC2827F8B0F000BDEDD0 /* dbBackground.jpg */,
@@ -197,15 +212,19 @@
 				3611EC2327F8B00800BDEDD0 /* goku.png in Resources */,
 				3611EC2427F8B00800BDEDD0 /* dragonball 2.png in Resources */,
 				3611EC2727F8B00800BDEDD0 /* vegeta.png in Resources */,
+				3611EC3527F8BCC600BDEDD0 /* exit.png in Resources */,
 				3611EC2927F8B0F000BDEDD0 /* dbBackground.jpg in Resources */,
 				3611EC0C27F8AC3400BDEDD0 /* Assets.xcassets in Resources */,
 				3611EC2027F8B00800BDEDD0 /* pikolo.png in Resources */,
+				3611EC3F27F8C58200BDEDD0 /* playButton1.png in Resources */,
+				3611EC3D27F8C3FB00BDEDD0 /* playButton.png in Resources */,
 				3611EC2627F8B00800BDEDD0 /* boo.png in Resources */,
 				3611EC0F27F8AC3400BDEDD0 /* LaunchScreen.storyboard in Resources */,
 				3611EC2127F8B00800BDEDD0 /* dragonball1.png in Resources */,
 				3611EC2227F8B00800BDEDD0 /* krilin.png in Resources */,
 				3611EC2527F8B00800BDEDD0 /* dragonball.png in Resources */,
 				3611EC0327F8AC3200BDEDD0 /* Actions.sks in Resources */,
+				3611EC3327F8BBEE00BDEDD0 /* UnknownCharacter.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +240,7 @@
 				3611EC2F27F8B2B500BDEDD0 /* GameObject.swift in Sources */,
 				3611EBFF27F8AC3200BDEDD0 /* AppDelegate.swift in Sources */,
 				3611EC2B27F8B1D100BDEDD0 /* BackgroundImage.swift in Sources */,
+				3611EC3927F8BF5F00BDEDD0 /* PlayButton.swift in Sources */,
 				3611EC2D27F8B26A00BDEDD0 /* SlotBackground.swift in Sources */,
 				3611EC3127F8B2D600BDEDD0 /* GameProtocol.swift in Sources */,
 			);
