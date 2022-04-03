@@ -37,6 +37,7 @@
 		3611EC4327F8CBCB00BDEDD0 /* SimpleSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611EC4227F8CBCB00BDEDD0 /* SimpleSprite.swift */; };
 		3611EC4527F8EA5600BDEDD0 /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = 3611EC4427F8EA5600BDEDD0 /* coin.png */; };
 		3611EC4727F9162C00BDEDD0 /* reset.png in Resources */ = {isa = PBXBuildFile; fileRef = 3611EC4627F9162C00BDEDD0 /* reset.png */; };
+		3611EC4A27F94D2600BDEDD0 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611EC4927F94D2600BDEDD0 /* GameManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		3611EC4227F8CBCB00BDEDD0 /* SimpleSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSprite.swift; sourceTree = "<group>"; };
 		3611EC4427F8EA5600BDEDD0 /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin.png; sourceTree = "<group>"; };
 		3611EC4627F9162C00BDEDD0 /* reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reset.png; sourceTree = "<group>"; };
+		3611EC4927F94D2600BDEDD0 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		3611EBF227F8AC3200BDEDD0 = {
 			isa = PBXGroup;
 			children = (
+				3611EC4827F94CE100BDEDD0 /* Manager */,
 				3611EC1627F8AE5600BDEDD0 /* Core */,
 				3611EC1527F8AE4000BDEDD0 /* GameObjects */,
 				3611EBFD27F8AC3200BDEDD0 /* MAPD724_SlotMachine_301194819 */,
@@ -159,6 +162,14 @@
 				3611EC1F27F8B00800BDEDD0 /* vegeta.png */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		3611EC4827F94CE100BDEDD0 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				3611EC4927F94D2600BDEDD0 /* GameManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +263,7 @@
 				3611EC0527F8AC3200BDEDD0 /* GameScene.swift in Sources */,
 				3611EC0727F8AC3200BDEDD0 /* GameViewController.swift in Sources */,
 				3611EC2F27F8B2B500BDEDD0 /* GameObject.swift in Sources */,
+				3611EC4A27F94D2600BDEDD0 /* GameManager.swift in Sources */,
 				3611EC4127F8C68C00BDEDD0 /* AnimeCharacter.swift in Sources */,
 				3611EC4327F8CBCB00BDEDD0 /* SimpleSprite.swift in Sources */,
 				3611EBFF27F8AC3200BDEDD0 /* AppDelegate.swift in Sources */,
@@ -413,7 +425,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -443,7 +455,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;

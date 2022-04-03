@@ -11,6 +11,10 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    
+    @IBAction func PlayButton(_ sender: Any) {
+        GameManager.spinSlots()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
