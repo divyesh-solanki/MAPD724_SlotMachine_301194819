@@ -1,5 +1,5 @@
 //
-//  SlotBackground.swift
+//  SimpleSprite.swift
 //  MAPD724_SlotMachine_301194819
 //
 //  Name: Divyesh Solanki
@@ -10,10 +10,10 @@ import Foundation
 import GameplayKit
 import SpriteKit
 
-class Slotbackground: GameObject {
-    init()
+class SimpleSprite: GameObject {
+    init(imageName: String, initialScale: CGFloat)
     {
-        super.init(imageString: "dragonball", initialScale: 0.4)
+        super.init(imageString: imageName, initialScale: initialScale)
     }
     
     required init?(coder aDecoder: NSCoder) {
