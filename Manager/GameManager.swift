@@ -17,7 +17,7 @@ class GameManager{
     public static var slot3CharacterImage = 0
 
     public static var betAmount = 1000
-    public static var currentBetAmount = 10
+    public static var currentBetAmount = 0
     public static var isValidBet = false
 
     public static func spinSlots(){
@@ -35,6 +35,15 @@ class GameManager{
     public static func checkResults(){
         betAmount = betAmount - currentBetAmount
     }
+    
+    public static func reset(){
+            slot1CharacterImage = 0
+            slot2CharacterImage = 0
+            slot3CharacterImage = 0
+            betAmount = 1000
+            currentBetAmount = 0
+            isValidBet = false
+        }
     
 }
 

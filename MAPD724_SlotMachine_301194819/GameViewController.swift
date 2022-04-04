@@ -22,6 +22,13 @@ class GameViewController: UIViewController {
         resetForNextRound()
     }
     
+    @IBAction func resetbuttonPressed(_ sender: UIButton) {
+        GameManager.reset()
+    }
+    
+    @IBAction func exitButtonPressed(_ sender: UIButton) {
+    }
+    
     @IBAction func betChanged(_ sender: UITextField) {
         if let currentBetAmount: Int = Int(betAmountTextField.text ?? "0") {
             if( currentBetAmount>0  && currentBetAmount<=GameManager.betAmount){
