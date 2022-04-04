@@ -32,7 +32,7 @@ class GameScene: SKScene {
     var jackpotLabel: SKLabelNode?
     var betAmountLabel: SKLabelNode?
 
-    var betAmount: SKShapeNode?
+    var betAmountInput: SKShapeNode?
 
     override func didMove(to view: SKView) {
         screenWidth = frame.width
@@ -56,11 +56,11 @@ class GameScene: SKScene {
         betAmountLabel?.fontSize = 15
         betAmountLabel?.fontName = "AvenirNext-Bold"
 
-        betAmount = SKShapeNode(rectOf: CGSize(width: 60, height: 20), cornerRadius: 5)
-        betAmount?.position = CGPoint(x: 300, y: -70)
-        betAmount?.fillColor = .clear
-        betAmount?.strokeColor = UIColor.white
-        betAmount?.lineWidth = 2
+        betAmountInput = SKShapeNode(rectOf: CGSize(width: 60, height: 20), cornerRadius: 5)
+        betAmountInput?.position = CGPoint(x: 300, y: -70)
+        betAmountInput?.fillColor = .clear
+        betAmountInput?.strokeColor = UIColor.white
+        betAmountInput?.lineWidth = 2
 
         backgroundImage = BackgroundImage() // allocate memory
         backgroundImage?.position = CGPoint(x: 0, y: -50)
@@ -96,7 +96,7 @@ class GameScene: SKScene {
         Slotbackground1?.zPosition = 2
         SlotBackground2?.zPosition = 2
         SlotBackground3?.zPosition = 2
-        playButton?.zPosition = 3
+        playButton?.zPosition = 2
         animeCharacter1?.zPosition = 3
         animeCharacter2?.zPosition = 3
         animeCharacter3?.zPosition = 3
@@ -104,7 +104,7 @@ class GameScene: SKScene {
         coin?.zPosition = 3
         jackpotLabel?.zPosition = 3
         betAmountLabel?.zPosition = 3
-        betAmount?.zPosition = 3
+        betAmountInput?.zPosition = 3
         QuitButton?.zPosition = 3
         ResetButton?.zPosition = 3
 
@@ -120,7 +120,7 @@ class GameScene: SKScene {
         addChild(coinLabel!)
         addChild(jackpotLabel!)
         addChild(betAmountLabel!)
-        addChild(betAmount!)
+        addChild(betAmountInput!)
         addChild(QuitButton!)
         addChild(ResetButton!)
     }
@@ -157,9 +157,10 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
-        animeCharacter1?.texture = SKTexture(imageNamed: GameManager.getCharacter(index: GameManager.slot1Character))
-        animeCharacter2?.texture = SKTexture(imageNamed: GameManager.getCharacter(index: GameManager.slot2Character))
-        animeCharacter3?.texture = SKTexture(imageNamed: GameManager.getCharacter(index: GameManager.slot3Character))
-        betAmountLabel?.text = String(GameManager.betAmount)
+        animeCharacter1?.texture = SKTexture(imageNamed: GameManager.getCharacter(index: GameManager.slot1CharacterImage))
+        animeCharacter2?.texture = SKTexture(imageNamed: GameManager.getCharacter(index: GameManager.slot2CharacterImage))
+        animeCharacter3?.texture = SKTexture(imageNamed: GameManager.getCharacter(index: GameManager.slot3CharacterImage))
+        coinLabel?.text = String(GameManager.betAmount)
+        playButton?.alpha = GameManager.isValidBet ? 1 : 0.3
     }
 }

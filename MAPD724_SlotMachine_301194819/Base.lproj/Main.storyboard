@@ -18,22 +18,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOf-Qt-tJ3">
-                                <rect key="frame" x="796" y="350" width="53" height="31"/>
+                                <rect key="frame" x="797" y="335" width="59" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Spin"/>
+                                <buttonConfiguration key="configuration" style="plain" title=" "/>
                                 <connections>
                                     <action selector="PlayButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="uLY-hA-mya"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="GpR-ez-d2l">
+                                <rect key="frame" x="797" y="285" width="71" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
+                                <connections>
+                                    <action selector="betChanged:" destination="BV1-FR-VrT" eventType="editingDidEnd" id="DM9-pu-2HG"/>
+                                    <action selector="betChanged:" destination="BV1-FR-VrT" eventType="editingChanged" id="qEe-Ph-P6X"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="PlayButton" destination="aOf-Qt-tJ3" id="mkF-vE-FsP"/>
+                        <outlet property="betAmountTextField" destination="GpR-ez-d2l" id="VRE-UF-wCQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="79"/>
+            <point key="canvasLocation" x="34.821428571428569" y="78.260869565217391"/>
         </scene>
     </scenes>
     <resources>

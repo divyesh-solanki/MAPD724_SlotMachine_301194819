@@ -12,12 +12,41 @@ import GameplayKit
 
 class GameViewController: UIViewController {
     
+    @IBOutlet weak var PlayButton: UIButton!
+    @IBOutlet weak var betAmountTextField: UITextField!
+    
+    
     @IBAction func PlayButton(_ sender: Any) {
+        GameManager.currentBetAmount = Int(betAmountTextField.text!)!
         GameManager.spinSlots()
+        resetForNextRound()
+    }
+    
+    @IBAction func betChanged(_ sender: UITextField) {
+        if let currentBetAmount: Int = Int(betAmountTextField.text ?? "0") {
+            if( currentBetAmount>0  && currentBetAmount<=GameManager.betAmount){
+                PlayButton.isEnabled = true
+                GameManager.isValidBet = true
+            } else {
+                PlayButton.isEnabled = false
+                GameManager.isValidBet = false
+            }
+        } else {
+            PlayButton.isEnabled = false
+            GameManager.isValidBet = false
+        }
+    }
+    
+    func resetForNextRound(){
+        GameManager.currentBetAmount = 0
+        GameManager.isValidBet = false
+        betAmountTextField.text = ""
+        PlayButton.isEnabled = false
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        PlayButton.isEnabled = false
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
