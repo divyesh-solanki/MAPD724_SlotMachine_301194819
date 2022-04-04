@@ -20,6 +20,16 @@ class GameViewController: UIViewController {
         GameManager.currentBetAmount = Int(betAmountTextField.text!)!
         GameManager.spinSlots()
         resetForNextRound()
+        if (GameManager.isJackpotWin == true)
+        {
+            let alert = UIAlertController(title: "Result", message: "CONGRATULATIONS!! YOU WON JACKPOT.", preferredStyle: .alert)
+
+                    // add an action (button)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func resetbuttonPressed(_ sender: UIButton) {
@@ -27,6 +37,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func exitButtonPressed(_ sender: UIButton) {
+        exit(0)
     }
     
     @IBAction func betChanged(_ sender: UITextField) {
@@ -54,6 +65,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         PlayButton.isEnabled = false
+        GameManager.jackpotvalues()
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'

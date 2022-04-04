@@ -76,12 +76,12 @@ class GameScene: SKScene {
         playButton?.position = CGPoint(x: 300, y: -120)
         playButton?.alpha = 0.3
 
-        animeCharacter1 = AnimeCharacter(imageName: "goku", initialScale: 0.08) // allocate memory
-        animeCharacter1?.position = CGPoint(x:0, y: 15)
-        animeCharacter2 = AnimeCharacter(imageName: "boo", initialScale: 0.08) // allocate memory
-        animeCharacter2?.position = CGPoint(x:150, y: 15)
-        animeCharacter3 = AnimeCharacter(imageName: "vegeta", initialScale: 0.12) // allocate memory
-        animeCharacter3?.position = CGPoint(x:-150, y: 15)
+        animeCharacter1 = AnimeCharacter(imageName: "UnknownCharacter", initialScale: 0.08) // allocate memory
+        animeCharacter1?.position = CGPoint(x:0, y: 12)
+        animeCharacter2 = AnimeCharacter(imageName: "UnknownCharacter", initialScale: 0.08) // allocate memory
+        animeCharacter2?.position = CGPoint(x:150, y: 12)
+        animeCharacter3 = AnimeCharacter(imageName: "UnknownCharacter", initialScale: 0.08) // allocate memory
+        animeCharacter3?.position = CGPoint(x:-150, y: 12)
 
         coin = SimpleSprite(imageName: "coin", initialScale: 0.03) // allocate memory
         coin?.position = CGPoint(x:260, y: 150)
@@ -157,9 +157,9 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
-        animeCharacter1?.texture = SKTexture(imageNamed: GameManager.getCharacter(index: GameManager.slot1CharacterImage))
-        animeCharacter2?.texture = SKTexture(imageNamed: GameManager.getCharacter(index: GameManager.slot2CharacterImage))
-        animeCharacter3?.texture = SKTexture(imageNamed: GameManager.getCharacter(index: GameManager.slot3CharacterImage))
+        animeCharacter1?.texture = SKTexture(imageNamed: GameManager.getCharacter(index: GameManager.betLine[1]))
+        animeCharacter2?.texture = SKTexture(imageNamed: GameManager.getCharacter(index: GameManager.betLine[2]))
+        animeCharacter3?.texture = SKTexture(imageNamed: GameManager.getCharacter(index: GameManager.betLine[0]))
         coinLabel?.text = String(GameManager.betAmount)
         playButton?.alpha = GameManager.isValidBet ? 1 : 0.3
     }
